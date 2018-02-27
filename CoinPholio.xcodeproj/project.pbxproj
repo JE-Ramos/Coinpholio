@@ -38,7 +38,7 @@
 		3F775104203CEF09006E7CA7 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		3F775107203CF041006E7CA7 /* InvestmentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentCellViewModel.swift; sourceTree = "<group>"; };
 		3F77510A203CF184006E7CA7 /* UIView+AddConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddConstraint.swift"; sourceTree = "<group>"; };
-		3FD20125203B9ED400B34645 /* Coinbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coinbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD20125203B9ED400B34645 /* CoinPholio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinPholio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD20128203B9ED400B34645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD2012A203B9ED400B34645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FD2012F203B9ED400B34645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		3FD20134203B9ED400B34645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD2013B203B9F7900B34645 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		3FD2013E203BA53A00B34645 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		3FD20182203BA69B00B34645 /* CoinbotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinbotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD20182203BA69B00B34645 /* CoinPholioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinPholioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD20186203BA69B00B34645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD2018C203BA6C900B34645 /* MarketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTests.swift; sourceTree = "<group>"; };
 		3FD20191203BB47500B34645 /* InvestmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 		3FD2011C203B9ED400B34645 = {
 			isa = PBXGroup;
 			children = (
-				3FD20127203B9ED400B34645 /* Coinbot */,
-				3FD20183203BA69B00B34645 /* CoinbotTests */,
+				3FD20127203B9ED400B34645 /* CoinPholio */,
+				3FD20183203BA69B00B34645 /* CoinPholioTests */,
 				3FD20126203B9ED400B34645 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,13 +101,13 @@
 		3FD20126203B9ED400B34645 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FD20125203B9ED400B34645 /* Coinbot.app */,
-				3FD20182203BA69B00B34645 /* CoinbotTests.xctest */,
+				3FD20125203B9ED400B34645 /* CoinPholio.app */,
+				3FD20182203BA69B00B34645 /* CoinPholioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3FD20127203B9ED400B34645 /* Coinbot */ = {
+		3FD20127203B9ED400B34645 /* CoinPholio */ = {
 			isa = PBXGroup;
 			children = (
 				3FD2018F203BB2EC00B34645 /* Components */,
@@ -118,7 +118,7 @@
 				3FD20131203B9ED400B34645 /* LaunchScreen.storyboard */,
 				3FD20134203B9ED400B34645 /* Info.plist */,
 			);
-			path = Coinbot;
+			path = CoinPholio;
 			sourceTree = "<group>";
 		};
 		3FD2013A203B9F5500B34645 /* CoinsPh */ = {
@@ -147,13 +147,13 @@
 			path = CoinsPh;
 			sourceTree = "<group>";
 		};
-		3FD20183203BA69B00B34645 /* CoinbotTests */ = {
+		3FD20183203BA69B00B34645 /* CoinPholioTests */ = {
 			isa = PBXGroup;
 			children = (
 				3FD2017D203BA62500B34645 /* CoinsPh */,
 				3FD20186203BA69B00B34645 /* Info.plist */,
 			);
-			path = CoinbotTests;
+			path = CoinPholioTests;
 			sourceTree = "<group>";
 		};
 		3FD2018E203BB2DE00B34645 /* App */ = {
@@ -187,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3FD20124203B9ED400B34645 /* Coinbot */ = {
+		3FD20124203B9ED400B34645 /* CoinPholio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FD20137203B9ED400B34645 /* Build configuration list for PBXNativeTarget "Coinbot" */;
+			buildConfigurationList = 3FD20137203B9ED400B34645 /* Build configuration list for PBXNativeTarget "CoinPholio" */;
 			buildPhases = (
 				3FD20121203B9ED400B34645 /* Sources */,
 				3FD20122203B9ED400B34645 /* Frameworks */,
@@ -199,14 +199,14 @@
 			);
 			dependencies = (
 			);
-			name = Coinbot;
+			name = CoinPholio;
 			productName = Coinbot;
-			productReference = 3FD20125203B9ED400B34645 /* Coinbot.app */;
+			productReference = 3FD20125203B9ED400B34645 /* CoinPholio.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3FD20181203BA69B00B34645 /* CoinbotTests */ = {
+		3FD20181203BA69B00B34645 /* CoinPholioTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FD20189203BA69B00B34645 /* Build configuration list for PBXNativeTarget "CoinbotTests" */;
+			buildConfigurationList = 3FD20189203BA69B00B34645 /* Build configuration list for PBXNativeTarget "CoinPholioTests" */;
 			buildPhases = (
 				3FD2017E203BA69B00B34645 /* Sources */,
 				3FD2017F203BA69B00B34645 /* Frameworks */,
@@ -217,9 +217,9 @@
 			dependencies = (
 				3FD20188203BA69B00B34645 /* PBXTargetDependency */,
 			);
-			name = CoinbotTests;
+			name = CoinPholioTests;
 			productName = CoinbotTests;
-			productReference = 3FD20182203BA69B00B34645 /* CoinbotTests.xctest */;
+			productReference = 3FD20182203BA69B00B34645 /* CoinPholioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -243,7 +243,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3FD20120203B9ED400B34645 /* Build configuration list for PBXProject "Coinbot" */;
+			buildConfigurationList = 3FD20120203B9ED400B34645 /* Build configuration list for PBXProject "CoinPholio" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -256,8 +256,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FD20124203B9ED400B34645 /* Coinbot */,
-				3FD20181203BA69B00B34645 /* CoinbotTests */,
+				3FD20124203B9ED400B34645 /* CoinPholio */,
+				3FD20181203BA69B00B34645 /* CoinPholioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 /* Begin PBXTargetDependency section */
 		3FD20188203BA69B00B34645 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3FD20124203B9ED400B34645 /* Coinbot */;
+			target = 3FD20124203B9ED400B34645 /* CoinPholio */;
 			targetProxy = 3FD20187203BA69B00B34645 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -445,7 +445,7 @@
 				DEVELOPMENT_TEAM = APQF5CXYC4;
 				INFOPLIST_FILE = Coinbot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jedr.Coinbot;
+				PRODUCT_BUNDLE_IDENTIFIER = io.coinphol.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,7 +460,7 @@
 				DEVELOPMENT_TEAM = APQF5CXYC4;
 				INFOPLIST_FILE = Coinbot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jedr.Coinbot;
+				PRODUCT_BUNDLE_IDENTIFIER = io.coinphol.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -478,7 +478,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coinbot.app/Coinbot";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinPholio.app/CoinPholio";
 			};
 			name = Debug;
 		};
@@ -493,14 +493,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coinbot.app/Coinbot";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinPholio.app/CoinPholio";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FD20120203B9ED400B34645 /* Build configuration list for PBXProject "Coinbot" */ = {
+		3FD20120203B9ED400B34645 /* Build configuration list for PBXProject "CoinPholio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FD20135203B9ED400B34645 /* Debug */,
@@ -509,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FD20137203B9ED400B34645 /* Build configuration list for PBXNativeTarget "Coinbot" */ = {
+		3FD20137203B9ED400B34645 /* Build configuration list for PBXNativeTarget "CoinPholio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FD20138203B9ED400B34645 /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FD20189203BA69B00B34645 /* Build configuration list for PBXNativeTarget "CoinbotTests" */ = {
+		3FD20189203BA69B00B34645 /* Build configuration list for PBXNativeTarget "CoinPholioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FD2018A203BA69B00B34645 /* Debug */,

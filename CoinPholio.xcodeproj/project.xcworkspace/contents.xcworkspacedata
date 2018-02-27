@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Coinbot.xcodeproj">
+      location = "self:/Users/johnernestramos/Documents/iOS Projects/Coinbot/CoinPholio.xcodeproj">
    </FileRef>
 </Workspace>
