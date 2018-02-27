@@ -12,6 +12,8 @@ class InvestmentViewController: UIViewController {
     
     var viewModel: InvestmentViewModel!
     
+    
+    /// Convinience property to cast the view as InvestmentView type
     private var customView: InvestmentView {
         return self.view as! InvestmentView
     }
@@ -19,6 +21,7 @@ class InvestmentViewController: UIViewController {
     override func loadView() {
         self.view = InvestmentView()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

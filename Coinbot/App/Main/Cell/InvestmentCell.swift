@@ -16,10 +16,10 @@ protocol InvestmentPresentable {
 }
 
 class InvestmentCell: UICollectionViewCell {
-  
+    
     let fiatLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.textAlignment = .left
         return label
     }()
     
@@ -31,7 +31,7 @@ class InvestmentCell: UICollectionViewCell {
     
     let cryptoLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.textAlignment = .right
         return label
     }()
     
@@ -48,27 +48,23 @@ class InvestmentCell: UICollectionViewCell {
     fileprivate func setupView() {
         
         addSubview(fiatLabel)
-        addSubview(priceLabel)
         addSubview(cryptoLabel)
         
-        self.backgroundColor = .green
+        backgroundColor = .white
         
         fiatLabel.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         cryptoLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        fiatLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        fiatLabel.trailingAnchor.constraint(equalTo: priceLabel.leadingAnchor).isActive = true
-        fiatLabel.widthAnchor.constraint(equalTo: priceLabel.widthAnchor).isActive = true
-        fiatLabel.centerYAnchor.constraint(equalTo: priceLabel.centerYAnchor).isActive = true
+        fiatLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
+        fiatLabel.trailingAnchor.constraint(equalTo: cryptoLabel.leadingAnchor).isActive = true
+        fiatLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         
-        priceLabel.trailingAnchor.constraint(equalTo: cryptoLabel.leadingAnchor).isActive = true
-        priceLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-        cryptoLabel.widthAnchor.constraint(equalTo: priceLabel.widthAnchor).isActive = true
-        cryptoLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        cryptoLabel.centerYAnchor.constraint(equalTo: priceLabel.centerYAnchor).isActive = true
+        cryptoLabel.widthAnchor.constraint(equalTo: fiatLabel.widthAnchor).isActive = true
+        cryptoLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
+        cryptoLabel.centerYAnchor.constraint(equalTo: fiatLabel.centerYAnchor).isActive = true
     }
 }
 
