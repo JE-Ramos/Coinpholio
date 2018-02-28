@@ -13,12 +13,25 @@ enum InvestmentType: String {
     case sold = "sold"
 }
 
-struct Investment {
+struct InvestmentCellViewModel {
     
-    let type: InvestmentType
+
     let fiat: Double
-    let crypto: Double
     let tradePrice: Double
+    let crypto: Double
+    let transactionDate: Date
     
+}
+
+extension InvestmentCellViewModel: InvestmentPresentable {
+    var fiatTitle: String {
+        return String(fiat)
+    }
+    
+    var cryptoTitle: String {
+        return String(crypto)
+    }
+    
+  
 }
 

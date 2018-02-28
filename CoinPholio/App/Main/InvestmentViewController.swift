@@ -40,17 +40,16 @@ extension InvestmentViewController: UICollectionViewDelegate {
 
 extension InvestmentViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel!.cellModels.count
+        return viewModel.numberOfItems(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InvestmentCell.identifier, for: indexPath) as! InvestmentCell
         
-        let model = viewModel.cellModels[indexPath.item]
+        let model = viewModel.cellModelFor(item: indexPath.item)
         
-        cell.fiatLabel.text = String(model.fiat)
-        cell.priceLabel.text = String(model.tradePrice)
-        cell.cryptoLabel.text = String(model.crypto)
+        cell.presentable = model
+        
         return cell
     }
 }
