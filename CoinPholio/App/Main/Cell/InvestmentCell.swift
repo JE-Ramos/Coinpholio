@@ -9,27 +9,34 @@
 import UIKit
 
 protocol InvestmentPresentable {
-    var indicator: String { get }
-    var fiatQuantity: String { get }
-    var cryptoQuantity: String { get }
-    var price: String { get }
+    
+    var fiatTitle: String { get }
+    var cryptoTitle: String { get }
+    
 }
 
 class InvestmentCell: UICollectionViewCell {
     
-    let fiatLabel: UILabel = {
+    var presentable: InvestmentPresentable? {
+        didSet {
+            fiatLabel.text = presentable?.fiatTitle
+            cryptoLabel.text = presentable?.cryptoTitle
+        }
+    }
+    
+    private let fiatLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         return label
     }()
     
-    let priceLabel: UILabel = {
+    private let priceLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
     }()
     
-    let cryptoLabel: UILabel = {
+    private let cryptoLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .right
         return label
@@ -45,7 +52,7 @@ class InvestmentCell: UICollectionViewCell {
     }
     
     
-    fileprivate func setupView() {
+    private func setupView() {
         
         addSubview(fiatLabel)
         addSubview(cryptoLabel)
