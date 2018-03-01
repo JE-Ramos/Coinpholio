@@ -9,8 +9,9 @@
 import UIKit
 
 protocol InvestmentPresentable {
-    var netCostText: String { get }
+    var fiatHoldingText: String { get }
     var cryptoHoldingText: String { get }
+    var netCostText: String { get }
 }
 
 
@@ -19,8 +20,9 @@ class InvestmentView: UIView {
     
     var delegate: InvestmentPresentable? {
         didSet {
-            netCostLabel.text = delegate?.netCostText
+            fiatHoldingLabel.text = delegate?.fiatHoldingText
             cryptoHoldingLabel.text = delegate?.cryptoHoldingText
+            netCostLabel.text = delegate?.netCostText
         }
     }
     
