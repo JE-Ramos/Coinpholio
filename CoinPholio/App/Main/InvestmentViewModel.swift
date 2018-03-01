@@ -15,6 +15,10 @@ struct InvestmentViewModel {
         return cellModels.reduce(0.0) { $0 + $1.fiat }
     }
     
+    var totalCryptoHolding: Double {
+        return cellModels.reduce(0.0) { $0 + $1.crypto }
+    }
+    
     init(cellModels: [InvestmentCellViewModel]) {
         self.cellModels = [
             
@@ -42,6 +46,10 @@ extension InvestmentViewModel {
 }
 
 extension InvestmentViewModel: InvestmentPresentable {
+    var cryptoHoldingText: String {
+        return String(format: "%0.8f", totalCryptoHolding)
+    }
+    
     var netCostText: String {
         return totalNetCost.stringWithCommas()
     }
