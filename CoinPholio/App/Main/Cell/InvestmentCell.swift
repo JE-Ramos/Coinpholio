@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol InvestmentPresentable {
+protocol InvestmentCellPresentable {
     
-    var fiatTitle: String { get }
-    var cryptoTitle: String { get }
+    var fiatText: String { get }
+    var cryptoText: String { get }
     
 }
 
 class InvestmentCell: UICollectionViewCell {
     
-    var presentable: InvestmentPresentable? {
+    var presentable: InvestmentCellPresentable? {
         didSet {
-            fiatLabel.text = presentable?.fiatTitle
-            cryptoLabel.text = presentable?.cryptoTitle
+            fiatLabel.text = presentable?.fiatText
+            cryptoLabel.text = presentable?.cryptoText
         }
     }
     
