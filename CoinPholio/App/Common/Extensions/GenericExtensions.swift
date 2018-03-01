@@ -22,4 +22,5 @@ extension Double {
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         return numberFormatter.string(from: NSNumber(value:self))!
     }
+    
 }
