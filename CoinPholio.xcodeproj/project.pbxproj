@@ -162,7 +162,7 @@
 		3FD2018E203BB2DE00B34645 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3FD20190203BB34200B34645 /* Main */,
+				3FD20190203BB34200B34645 /* Investment */,
 				3FD2013D203BA52700B34645 /* Common */,
 			);
 			path = App;
@@ -176,7 +176,7 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		3FD20190203BB34200B34645 /* Main */ = {
+		3FD20190203BB34200B34645 /* Investment */ = {
 			isa = PBXGroup;
 			children = (
 				3F775101203CEEB1006E7CA7 /* Cell */,
@@ -184,7 +184,7 @@
 				3FD20196203BB4BA00B34645 /* InvestmentViewModel.swift */,
 				3FFE1066203F87800029E0AF /* InvestmentView.swift */,
 			);
-			path = Main;
+			path = Investment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
