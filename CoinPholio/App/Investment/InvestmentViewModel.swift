@@ -19,6 +19,11 @@ struct InvestmentViewModel {
         return cellModels.reduce(0.0) { $0 + $1.crypto }
     }
     
+    //TODO: Replace Dummy.sellPrice with real sell price
+    var totalFiatHolding: Double {
+        return Dummy.sellPrice * totalCryptoHolding
+    }
+    
     init(cellModels: [InvestmentCellViewModel]) {
         self.cellModels = [
             
@@ -46,6 +51,10 @@ extension InvestmentViewModel {
 }
 
 extension InvestmentViewModel: InvestmentPresentable {
+    var fiatHoldingText: String {
+        return totalFiatHolding.stringWithCommas()
+    }
+    
     var cryptoHoldingText: String {
         return String(format: "%0.8f", totalCryptoHolding)
     }

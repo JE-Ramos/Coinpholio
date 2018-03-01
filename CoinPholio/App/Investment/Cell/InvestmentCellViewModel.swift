@@ -14,8 +14,6 @@ enum InvestmentType: String {
 }
 
 struct InvestmentCellViewModel {
-    
-
     let fiat: Double
     let tradePrice: Double
     let crypto: Double
@@ -28,7 +26,7 @@ extension InvestmentCellViewModel: InvestmentCellPresentable {
     }
     
     var cryptoText: String {
-        return crypto.stringWithCommas()
+        return String(format: "%0.8f", crypto)
     }
     
   
