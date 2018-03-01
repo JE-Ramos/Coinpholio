@@ -31,6 +31,8 @@ class InvestmentViewController: UIViewController {
         customView.collectionView.register(InvestmentCell.self, forCellWithReuseIdentifier: InvestmentCell.identifier)
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self
+        
+        customView.delegate = viewModel
     }
 }
 

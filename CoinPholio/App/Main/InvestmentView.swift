@@ -8,9 +8,19 @@
 
 import UIKit
 
+protocol InvestmentPresentable {
+    var netCostText: String { get }
+}
+
 
 /// Custom view for the investment screen
 class InvestmentView: UIView {
+    
+    var delegate: InvestmentPresentable? {
+        didSet {
+            netCostLabel.text = delegate?.netCostText
+        }
+    }
     
     let headerView: UIView = {
         let view = UIView()
@@ -63,6 +73,7 @@ class InvestmentView: UIView {
         return label
         
     }()
+    
     let cryptoSegmentedControl: UISegmentedControl = {
         let segControl = UISegmentedControl()
         segControl.insertSegment(withTitle: "BTC", at: 0, animated: false)

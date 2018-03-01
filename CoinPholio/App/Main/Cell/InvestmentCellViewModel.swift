@@ -20,16 +20,15 @@ struct InvestmentCellViewModel {
     let tradePrice: Double
     let crypto: Double
     let transactionDate: Date
-    
 }
 
-extension InvestmentCellViewModel: InvestmentPresentable {
-    var fiatTitle: String {
-        return String(fiat)
+extension InvestmentCellViewModel: InvestmentCellPresentable {
+    var fiatText: String {
+        return fiat.stringWithCommas()
     }
     
-    var cryptoTitle: String {
-        return String(crypto)
+    var cryptoText: String {
+        return crypto.stringWithCommas()
     }
     
   
