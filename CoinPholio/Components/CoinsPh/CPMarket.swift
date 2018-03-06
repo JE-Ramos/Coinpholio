@@ -12,7 +12,7 @@ import Foundation
 /// Structure for the market price of Coins.PH
 /// Sample market data:
 /// {"market":{"symbol":"BTC-PHP","currency":"PHP","product":"BTC","bid":"586068","ask":"606893","expires_in_seconds":19}}
-struct Market: Decodable {
+struct CPMarket: Decodable {
     let symbol: String
     let currency: String
     let product: String
