@@ -33,6 +33,8 @@ class InvestmentViewController: UIViewController {
         customView.collectionView.dataSource = self
         
         customView.delegate = viewModel
+        
+        CPPriceChecker().subscribe(delegate: self)
     }
 }
 
@@ -60,4 +62,16 @@ extension InvestmentViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 50)
     }
+}
+
+extension InvestmentViewController: CPPriceCheckerDelegate {
+    func didFailFetching(error: Error) {
+        
+    }
+    
+    func didUpdateMarket(market: CPMarket) {
+        print("Market: \(market)")
+    }
+    
+    
 }
